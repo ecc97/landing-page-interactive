@@ -1,0 +1,140 @@
+.list-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(45deg, #020024, #164c92, #3c3c3c);
+    background-size: 400% 400%;
+    color: white;
+}
+
+.list-component__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.list-component__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.list-component__add-idea {
+    flex: 1;
+}
+
+
+.list-component__add-idea input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.list-component__add-idea button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.list-component__add-idea button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.list-component__add-idea input:focus {
+    outline: 2px solid #ccc;
+    outline-offset: 4px;
+}
+
+.list-component__ideas {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.list-component__ideas h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-component__ideas-list {
+    list-style: none;
+    background-color: var(--color-background);
+    width: 32rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.list-component__idea-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 0.5rem;
+}
+
+.list-component__idea-item:last-child {
+    margin-bottom: 0;
+}
+
+.list-component__idea-item>span {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.list-component__idea-item>span:hover {
+    text-decoration: underline;
+}
+
+.list-component__idea-item>button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.list-component__idea-item>button:hover {
+    background-color: darkred;
+}
+
+@media (width <=768px) {
+    .list-component__container {
+        flex-direction: column;
+    }
+
+    .list-component__add-idea {
+        margin-bottom: 1rem;
+    }
+
+    .list-component__ideas {
+        width: 100%;
+    }
+
+    .list-component__ideas-list {
+        width: 100%;
+    }
+
+}
